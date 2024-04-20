@@ -1,0 +1,58 @@
+# 40/min trade submissions
+# 60/min market/quotes
+# 180/min balances/summary
+
+# URIs
+base_uri: https://api.tradeking.com/v1/
+stream_base_uri: https://stream.tradeking.com/v1
+
+name: ally
+
+# Service Endpoints -- all end in (.xml|.json)
+base_context:
+  accounts: accounts
+  market: market
+  orders: accounts/#/orders # GET (Retrieve), POST (Place)
+
+
+sub_contexts:
+  clock: clock
+  orders_preview: preview
+  quotes: ext/quotes # GET|POST with ?symbols=SYMB,SYMB2
+  quotes_stream: quotes
+
+# Call frequencies
+delays:
+  quotes: 1.15      # seconds
+  trades: 1.5     # seconds
+  balances: 0.333 # seconds
+
+# Keys
+consumer_key:
+consumer_secret:
+oauth_token:
+oauth_token_secret:
+
+# Stock symbols to trade
+stock_symbols:
+maximum_cash_investment: 50000 # Anything <= 1.0 && > 0 considered percentage
+maximum_cash_by_stock: # Allows appropriation of Max investable cash by Stock Symbol
+
+# Account information
+account_id:
+
+# FIXML info
+fixml:
+  namespace: http://www.fixprotocol.org/FIXML-5-0-SP2
+
+
+thresholds:
+  negative: 1.0 # 1
+  positive: 1.003 # 1.003
+
+quote_keys:
+  symbol: symbol
+  price: last
+  datetime: datetime
+
+log_file: ally.log

@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    container_name: stocks_db
+    environment:
+      - "POSTGRES_PASSWORD=stocks_password"
+    ports:
+      - 54320:5432
+    volumes: 
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql

@@ -1,0 +1,6 @@
+1. Error handling around every API call to return empty data as a result
+2. Handle closing time and implement an earliest_convenience_exit to:
+      - Exit if 10 min prior to closing & no shares owned.
+        OR sell all shares then exit.
+3. Implement Logging using logger and writing to file.
+4. How to handle account that starts with NO holdings (no shares owned)

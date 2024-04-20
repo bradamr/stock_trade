@@ -1,0 +1,12 @@
+# Service Endpoints
+account: account
+account_activities: account/activities
+#account_configurations: account/configurations
+calendar: calendar
+orders: orders
+
+# /positions/SYMB for specific symbol
+positions: positions
+assets: assets
+streaming: stream
+clock: clock

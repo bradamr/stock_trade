@@ -1,0 +1,5 @@
+# ?apiKey
+base_uri: https://api.polygon.io/
+
+# historic/quotes/SYMB/YYYY-MM-DD
+quotes: historic/quotes/SYMB/DATE
